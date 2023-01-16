@@ -1,1 +1,1 @@
-# projeto_ic_mackenzie_2023
+# Projeto de serious game desenvolvido para Iniciação Científica - Sistemas de Informação
