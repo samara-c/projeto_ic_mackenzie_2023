@@ -1,0 +1,31 @@
+Enredo: 
+
+Pedro, Julia e Otávio são estudantes do curso de Tecnologia da Informação que resolvem abrir seu próprio negócio juntos. A "Jogos Dourados", empresa
+fundada e gerida pelos três amigos, seleciona, testa, adquire e publica jogos de computador desenvolvidos por outras pessoas. Basicamente,
+eles pagam um valor pelo direito de comercialização dos jogos e lucram com sua venda para o consumidor final.
+Apesar da ideia ser muito boa, a empresa enfrenta um problema no momento de aquisição dos jogos: alguns deles possuem muitos bugs! Se esses
+jogos forem entregues aos clientes da maneira que vieram, poderão causar mais problemas. Por outro lado, a correção dos bugs pode levar muito
+tempo e não compensar o esforço necessário financeiramente. Por essa razão, o papel do testador, do Pedro, é muito importante: é ele quem vai buscar os
+bugs e reportar para a Julia, a responsável técnica do projeto. Para que consiga desempenhar bem sua função, Pedro estuda todas as noites
+e aprende conceitos de teste importantes antes de ir para a faculdade, onde vai se encontrar com seus colegas e receber novas tarefas.
+
+
+Personagens:
+
+Pedro (jogador) - assume a função de testar os jogos adquiridos e avaliar se estão aptos para serem publicados
+Julia - realiza pequenas correções quando necessário e publica os jogos na plataforma da empresa
+Otavio - realiza o contato com os desenvolvedores independentes e toma conta da parte administrativa da empresa
+
+Ambientes:
+
+Quarto do Pedro - Onde o jogador aprende sobre os conceitos de teste, estudando o material disponibilizado pela sua professora de Testes
+Sala de convivência - Onde os jogos são testados e o jogador recebe feedbacks de seus colegas (sobre a quantidade de bugs encontrados - Julia, 
+e sobre o potencial lucro/prejuízo do jogo entregue - Otávio)
+
+Itens:
+Relógio - Quanto mais bugs reportados em menos tempo, maior a pontuação.
+Dinheiro - O caixa começa com 100 reais. Jogos bem sucedidos (entregues sem ou com 1 bug não encontrado) garantem um lucro de 50 reais para a empresa.
+Jogos entregues com 2 ou 3 bugs não dão lucro. Jogos com mais de 3 bugs não reportados geram um prejuízo de 50 reais.
+
+
+Roteiro
