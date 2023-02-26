@@ -17,20 +17,23 @@ window.addEventListener('load', function(){
 
     
     var pos_x_personagem = 10;
-    var pos_y_personagem = 130;
+    var pos_y_personagem = 120;
+    var abc = "abc";
+    
 
 
     function desenhaTelaPadrao(){
         ctx.fillStyle = 'black';
         ctx.fillRect(recuo_tela, recuo_tela, screen.width, screen.height);
-        desenhaBG('school');
+        desenhaBG('bedroom_night');
+        defineEDesenhaPersonagem("pedro","sad");
         desenhaCaixaDeTexto();
-        defineEDesenhaPersonagem("julia","happy","d");
+        escreveTextoNaCaixaDeTexto("Bem vindo, jogador! Hoje vamos falar sobre testes aa");
     }
 
     // valores para personagem: 'julia', 'pedro', 'otavio'
     // valores para sentimento: 'angry', 'happy', 'sad'
-    function defineEDesenhaPersonagem(personagem, sentimento, posicao = "e") {
+    function defineEDesenhaPersonagem(personagem, sentimento, posicao = "d") {
 
         var personagem_default = new Image();
         var tamanho_personagem_x = 250;
@@ -51,11 +54,49 @@ window.addEventListener('load', function(){
     }
 
     function desenhaCaixaDeTexto(){
+
+        var pos_x_caixa_texto = 40;
+        var pos_y_caixa_texto = 360;
+        var tam_x_caixa_texto = 820;
+        var tam_y_caixa_texto = 200;
+
+        // define a transparencia onde '1.0' é sem transparencia
+        ctx.globalAlpha = 0.6;
+
+        // define a cor da caixa de texto
         ctx.fillStyle = 'white';
-        ctx.fillRect(10, 10, 880, 200);
+
+        // define a cor do contorno da forma e o tamanho
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+
+        ctx.fillRect(pos_x_caixa_texto, pos_y_caixa_texto, tam_x_caixa_texto, tam_y_caixa_texto);
+        ctx.strokeRect(pos_x_caixa_texto, pos_y_caixa_texto, tam_x_caixa_texto, tam_y_caixa_texto);
+        ctx.globalAlpha = 1.0;
+        
+
+    }
+
+    function escreveTextoNaCaixaDeTexto(texto, posicao='e', cor='black'){
+
+        var pos_x_texto = 60;
+        var pos_y_texto = 80;
+
+
+        if (texto.length>52){
+            
+        }
+
+        if (posicao =='d'){
+
+        }
+
+
+        console.log(texto.length);
         ctx.font = '25px arial';
         ctx.fillStyle = 'black';
-        ctx.fillText('Ola mundo', 30,70);
+        ctx.fillText(texto, pos_x_texto,pos_y_texto);
+
 
     }
 
