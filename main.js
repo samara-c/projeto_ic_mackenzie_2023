@@ -19,6 +19,20 @@ window.addEventListener('load', function(){
     var pos_x_personagem = 10;
     var pos_y_personagem = 120;
     var abc = "abc";
+
+    var pos_x_caixa_texto = 40;
+    var pos_y_caixa_texto = 360;
+    var tam_x_caixa_texto = 820;
+    var tam_y_caixa_texto = 200;
+
+    var MARGIN_SIDES = 40;
+    var MARGIN_BOTTOM = 10;
+    var TEXTAREA_HEIGHT = 200;
+    var TEXT_MAP = new Map();
+    var TEXT_MARGIN = 5;
+    var TEXT_LINE_SPACING = 10;
+
+
     
 
 
@@ -28,7 +42,7 @@ window.addEventListener('load', function(){
         desenhaBG('bedroom_night');
         defineEDesenhaPersonagem("pedro","sad");
         desenhaCaixaDeTexto();
-        escreveTextoNaCaixaDeTexto("Bem vindo, jogador! Hoje vamos falar sobre testes aa");
+        escreveTextoNaCaixaDeTexto("O método slice() extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.");
     }
 
     // valores para personagem: 'julia', 'pedro', 'otavio'
@@ -55,10 +69,7 @@ window.addEventListener('load', function(){
 
     function desenhaCaixaDeTexto(){
 
-        var pos_x_caixa_texto = 40;
-        var pos_y_caixa_texto = 360;
-        var tam_x_caixa_texto = 820;
-        var tam_y_caixa_texto = 200;
+        
 
         // define a transparencia onde '1.0' é sem transparencia
         ctx.globalAlpha = 0.6;
@@ -77,28 +88,53 @@ window.addEventListener('load', function(){
 
     }
 
-    function escreveTextoNaCaixaDeTexto(texto, posicao='e', cor='black'){
+    function escreveTextoNaCaixaDeTexto(texto){
 
-        var pos_x_texto = 60;
-        var pos_y_texto = 80;
+        var tam_caixa_texto_para_escrita = 52;
+        var tam = 0;
+        var multiplicador_de_limite = 1;
+        var pos_y_escrita_texto = pos_y_caixa_texto+40;
+        var segundo_array_texto = [];
+        var limite = 60;
 
-
-        if (texto.length>52){
-            
-        }
-
-        if (posicao =='d'){
-
-        }
-
-
-        console.log(texto.length);
         ctx.font = '25px arial';
         ctx.fillStyle = 'black';
-        ctx.fillText(texto, pos_x_texto,pos_y_texto);
+        
+        console.log(texto.length);
+        if (texto.length > limite) {
+
+            var i = 0;
+
+            while (i<texto.length){
+                
+                segundo_array_texto[tam] = texto.slice(i,limite*multiplicador_de_limite);
+                console.log(segundo_array_texto[tam]);
+                i+=limite;
+                multiplicador_de_limite+=1;
+                tam+=1;
+
+
+            }
+
+        }
+
+        for (let i=0; i<segundo_array_texto.length; i++){
+
+            ctx.fillText(segundo_array_texto[i], pos_x_caixa_texto+20, pos_y_escrita_texto);
+            pos_y_escrita_texto+=25;
+
+
+        }
+        
+
+        //37
+
+        
+        
 
 
     }
+    
 
     function desenhaBG(ambiente){
         var bg_default = new Image();
